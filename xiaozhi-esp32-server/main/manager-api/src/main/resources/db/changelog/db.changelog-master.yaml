@@ -1,0 +1,18 @@
+# 规范约定：
+# id生成根据时间时分，文件名对应id
+# 每次对数据表进行改动时，只允许新建新对changeSet，不允许对上一个changeSet配置及文件进行修改
+databaseChangeLog:
+  - changeSet:
+      id: 202503141335
+      author: John
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/202503141335.sql
+  - changeSet:
+      id: 202503141346
+      author: czc
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/changelog/202503141346.sql
